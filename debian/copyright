@@ -1,5 +1,5 @@
 Format: Format: http://dep.debian.net/deps/dep5
-Name: bear
+Name: erlang-cowboy
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Source: https://github.com/extend/cowboy.git
 

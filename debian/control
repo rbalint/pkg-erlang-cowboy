@@ -1,4 +1,4 @@
-Source: cowboy
+Source: erlang-cowboy
 Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Section: devel
 Priority: optional
