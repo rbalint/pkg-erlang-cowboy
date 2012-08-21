@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Name: erlang-cowboy
-Maintainer: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+upstream-name: cowboy
+upstream-contact: Loïc Hoguin <essen@ninenines.eu>
 Source: https://github.com/extend/cowboy.git
 
 Files: *
