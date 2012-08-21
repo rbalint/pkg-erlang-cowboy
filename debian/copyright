@@ -5,13 +5,13 @@ Source: https://github.com/extend/cowboy.git
 
 Files: *
 Copyright: 2011-2012, Loïc Hoguin <essen@ninenines.eu>
-License: original
+License: ISC license
 
 Files: debian/*
 Copyright: Copyright 2012, Nobuhiro Iwamatsu <iwamatsu@debian.org>
 License: Apache-2.0
 
-original:
+License: ISC license
  Permission to use, copy, modify, and/or distribute this software for any 
  purpose with or without fee is hereby granted, provided that the above
  copyright notice and this permission notice appear in all copies.
