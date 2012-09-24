@@ -20,3 +20,10 @@ override_dh_auto_install:
 		$(CURDIR)/debian/erlang-$(PACKAGE)/usr/lib/erlang/lib/$(PACKAGE)-$(VERSION)/include
 	install -m 644 include/* \
 		$(CURDIR)/debian/erlang-$(PACKAGE)/usr/lib/erlang/lib/$(PACKAGE)-$(VERSION)/include/
+
+override_dh_gencontrol-arch:
+	erlang-depends -a
+	dh_gencontrol -a
+
+override_dh_compress-arch:
+	dh_compress -X.erl -X.beam
