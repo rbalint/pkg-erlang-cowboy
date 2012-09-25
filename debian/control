@@ -1,7 +1,7 @@
 Source: erlang-cowboy
 Maintainer: LeoFS maintainers team <pkg-leofs-devel@lists.alioth.debian.org>
 Uploaders: Nobuhiro Iwamatsu <iwamatsu@debian.org>
-Section: web
+Section: devel
 Priority: optional
 Standards-Version: 3.9.3
 Homepage: https://github.com/basho/bitcask
