@@ -1,5 +1,5 @@
 erlang-cowboy (0.6.1-1) unstable; urgency=low
 
-  * Initial release
+  * Initial release (Closes: #688723)
 
  -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 17 Jul 2012 15:27:20 +0900
