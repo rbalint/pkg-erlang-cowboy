@@ -1,3 +1,9 @@
+erlang-cowboy (0.6.1-2) unstable; urgency=low
+
+  * Fix Homepage field.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Wed, 28 Nov 2012 08:45:31 +0900
+
 erlang-cowboy (0.6.1-1) unstable; urgency=low
 
   * Initial release (Closes: #688723)
