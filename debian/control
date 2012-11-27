@@ -4,7 +4,7 @@ Uploaders: Taku YASUI <tach@debian.org>, Nobuhiro Iwamatsu <iwamatsu@debian.org>
 Section: devel
 Priority: optional
 Standards-Version: 3.9.4
-Homepage: https://github.com/basho/bitcask
+Homepage: https://github.com/extend/cowboy
 Vcs-Git: git://anonscm.debian.org/pkg-leofs/erlang-cowboy.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-leofs/erlang-cowboy.git;a=summary
 Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.16.1~), erlang-dev (>= 1:15.b.1),
