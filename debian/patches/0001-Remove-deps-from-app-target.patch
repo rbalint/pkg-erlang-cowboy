@@ -1,0 +1,31 @@
+Description: Fix build with insalled rebar package on Debian
+Forwarded: not-needed
+Bug-Debian: None
+Author: Nobuhiro Iwamatsu <iwamatsu@debian.org>
+
+From 7582b6ed82c29cb8a97a633da81e3b7edd14943e Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>
+Date: Wed, 28 Nov 2012 09:11:09 +0900
+Subject: [PATCH 1/2] Remove deps from app target
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>
+---
+ Makefile |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 1d9bfd7..736d794 100644
+--- a/Makefile
++++ b/Makefile
+@@ -12,7 +12,7 @@ all: app
+ deps:
+ 	@$(REBAR) get-deps
+ 
+-app: deps
++app:
+ 	@$(REBAR) compile
+ 
+ clean:
+-- 
+1.7.10.4
+
