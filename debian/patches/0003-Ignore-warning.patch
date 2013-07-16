@@ -1,0 +1,28 @@
+From 4818944a5677650362859bc02d8c93167c48f721 Mon Sep 17 00:00:00 2001
+From: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>
+Date: Tue, 16 Jul 2013 12:41:16 +0900
+Subject: [PATCH] Ignore warning
+
+Signed-off-by: Nobuhiro Iwamatsu <iwamatsu@nigauri.org>
+---
+ src/cowboy_http_websocket.erl |    4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/cowboy_http_websocket.erl b/src/cowboy_http_websocket.erl
+index b7a146f..7020600 100644
+--- a/src/cowboy_http_websocket.erl
++++ b/src/cowboy_http_websocket.erl
+@@ -19,6 +19,10 @@
+ %% is no need for concern as crypto is already included.
+ -module(cowboy_http_websocket).
+ 
++%% Ignore the deprecation warning for crypto:sha/1.
++%% @todo Remove when we support only R16B+.
++-compile(nowarn_deprecated_function).
++
+ -export([upgrade/4]). %% API.
+ -export([handler_loop/4]). %% Internal.
+ 
+-- 
+1.7.10.4
+

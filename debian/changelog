@@ -1,3 +1,9 @@
+erlang-cowboy (0.6.1-3) unstable; urgency=low
+
+  * Add patches/0003-Ignore-warning.patch. (Closes: #713505)
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 16 Jul 2013 12:43:13 +0900
+
 erlang-cowboy (0.6.1-2) unstable; urgency=low
 
   * Update debian/control.
