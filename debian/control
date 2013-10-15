@@ -9,7 +9,7 @@ Vcs-Git: git://anonscm.debian.org/pkg-leofs/erlang-cowboy.git
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-leofs/erlang-cowboy.git;a=summary
 Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.16.1~), erlang-dev (>= 1:15.b.1),
 	erlang-eunit (>= 1:15.b.1), dh-rebar, erlang-proper-dev (>= 1.0), erlang-common-test,
-	erlang-ranch (>= 0.8.4)
+	erlang-ranch (>= 0.8.4), erlang-edoc
 
 Package: erlang-cowboy
 Architecture: any
@@ -33,3 +33,26 @@ Description: Cowboy is a small, fast and modular HTTP server written in Erlang
      requests to your embedded code and others to a FastCGI application in
      PHP or Ruby.
    * No parameterized module. No process dictionary. 'Clean' Erlang code.
+
+Package: erlang-cowboy-doc
+Architecture: all
+Section: doc
+Depends: ${misc:Depends}
+Description: Documentation files for erlang-cowboy
+ Cowboy is also a socket acceptor pool, able to accept connections
+ for any kind of TCP protocol.
+ .
+ Cowboy aims to provide the following advantages:
+ .
+   * 'Small' code base.
+   * Damn 'fast'.
+   * 'Modular': transport and protocol handlers are replaceable.
+   * 'Binary HTTP' for greater speed and lower memory usage.
+   * Easy to 'embed' inside another application.
+   * Selectively 'dispatch' requests to handlers, allowing you to send some
+     requests to your embedded code and others to a FastCGI application in
+     PHP or Ruby.
+   * No parameterized module. No process dictionary. 'Clean' Erlang code.
+ .
+ This package includes erlang-cowboy documents.
+

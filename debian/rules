@@ -2,3 +2,13 @@
 
 %:
 	dh $@ --buildsystem=rebar --with rebar
+
+override_dh_installdocs-indep:
+	dh_installdocs
+
+	mv $(CURDIR)/debian/erlang-cowboy-doc/usr/share/doc/erlang-cowboy-doc/doc \
+		$(CURDIR)/debian/erlang-cowboy-doc/usr/share/doc/erlang-cowboy-doc/edoc
+	rm -rf $(CURDIR)/debian/erlang-cowboy-doc/usr/share/doc/erlang-cowboy-doc/edoc/overview.edoc
+
+override_dh_auto_clean:
+	rm -rf doc/*.html doc/*.png doc/*.css doc/edoc-info
