@@ -1,4 +1,1 @@
-##0001-Remove-deps-from-app-target.patch
-#0002-Remove-deps-proper-from-tests-and-inittests-target.patch
-#0003-Ignore-warning.patch
 remove_deps
