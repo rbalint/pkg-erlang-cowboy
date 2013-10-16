@@ -6,9 +6,11 @@ erlang-cowboy (0.8.6+dfsg-1) unstable; urgency=low
   * Update debian/chnagelog.
     Refer to common-license file for apache-2.0
   * Update debian/rules.
-    Change to dh-rebar.
+    - Change to dh-rebar.
+    - Update clean target.
   * Update debian/control.
-    Add erlang-ranch to Build-Depends.
+    - Add erlang-ranch and erlang-edoc to Build-Depends.
+    - Add erlang-cowboy-doc package.
 
  -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 15 Oct 2013 10:42:19 +0900
 
