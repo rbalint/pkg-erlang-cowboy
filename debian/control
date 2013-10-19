@@ -17,7 +17,6 @@ Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends},
 	 erlang-base-hipe | erlang-base | ${erlang-abi:Depends}, ${erlang:Depends}
-Enhances: erlang
 Description: Cowboy is a small, fast and modular HTTP server written in Erlang
  Cowboy is also a socket acceptor pool, able to accept connections
  for any kind of TCP protocol.
@@ -33,6 +32,29 @@ Description: Cowboy is a small, fast and modular HTTP server written in Erlang
      requests to your embedded code and others to a FastCGI application in
      PHP or Ruby.
    * No parameterized module. No process dictionary. 'Clean' Erlang code.
+
+Package: erlang-cowboy-examples
+Architecture: all
+Section: devel
+Depends: ${misc:Depends}, libjs-jquery
+Recommends: erlang-cowboy
+Description: Examples for erlang-cowboy
+ Cowboy is also a socket acceptor pool, able to accept connections
+ for any kind of TCP protocol.
+ .
+ Cowboy aims to provide the following advantages:
+ .
+   * 'Small' code base.
+   * Damn 'fast'.
+   * 'Modular': transport and protocol handlers are replaceable.
+   * 'Binary HTTP' for greater speed and lower memory usage.
+   * Easy to 'embed' inside another application.
+   * Selectively 'dispatch' requests to handlers, allowing you to send some
+     requests to your embedded code and others to a FastCGI application in
+     PHP or Ruby.
+   * No parameterized module. No process dictionary. 'Clean' Erlang code.
+ .
+ This package includes erlang-cowboy examples.
 
 Package: erlang-cowboy-doc
 Architecture: all
