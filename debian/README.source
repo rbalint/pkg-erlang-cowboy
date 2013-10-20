@@ -1,0 +1,8 @@
+erlang-cowboy source package infomation
+
+- Remove mp4 and ogv binary from source code 
+
+  Erlang-bitcask's original source codes contains video data.
+  The source package of Debian has deleted.
+
+-- Nobuhiro Iwamatsu <iwamatsu@debian.org> Sun, 20 Oct 2013 09:50:41 +0900

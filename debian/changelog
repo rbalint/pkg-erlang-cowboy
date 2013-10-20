@@ -11,8 +11,9 @@ erlang-cowboy (0.8.6+dfsg-1) unstable; urgency=low
   * Update debian/control.
     - Add erlang-ranch and erlang-edoc to Build-Depends.
     - Add erlang-cowboy-doc package.
+  * Add debian/README.source.
 
- -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Tue, 15 Oct 2013 10:42:19 +0900
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Sun, 20 Oct 2013 09:52:14 +0900
 
 erlang-cowboy (0.6.1-3) unstable; urgency=low
 
