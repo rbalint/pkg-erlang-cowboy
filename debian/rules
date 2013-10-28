@@ -1,7 +1,5 @@
 #!/usr/bin/make -f
 
-JQUERY_MIN = "usr/share/doc/erlang-cowboy-examples/examples/websocket/priv/static/jquery.min.js"
-
 %:
 	dh $@ --buildsystem=rebar --with rebar
 
@@ -15,8 +13,6 @@ override_dh_installdocs-indep:
 
 override_dh_installexamples-indep:
 	dh_installexamples
-
-	rm -rf $(CURDIR)/debian/erlang-cowboy-exmaples/$(JQUERY_MIN)
 
 override_dh_auto_clean:
 	rm -rf doc/*.html doc/*.png doc/*.css doc/edoc-info
