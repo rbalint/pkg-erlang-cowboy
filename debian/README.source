@@ -5,4 +5,6 @@ erlang-cowboy source package infomation
   Erlang-bitcask's original source codes contains video data.
   The source package of Debian has deleted.
 
--- Nobuhiro Iwamatsu <iwamatsu@debian.org> Sun, 20 Oct 2013 09:50:41 +0900
+- Remove sourceless javascript (jquery.min.js).
+
+-- Nobuhiro Iwamatsu <iwamatsu@debian.org> Mon, 28 Oct 2013 11:59:59 +0900
