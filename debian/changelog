@@ -1,3 +1,12 @@
+erlang-cowboy (0.8.6+dfsg1-1) unstable; urgency=low
+
+  * Remove sourceless javascript (jquery.min.js) from source code.
+    (Closes: #727836)
+  " Update debian/rules.
+    - Remove line for remove jquery.min.js.
+
+ -- Nobuhiro Iwamatsu <iwamatsu@debian.org>  Mon, 28 Oct 2013 12:00:42 +0900
+
 erlang-cowboy (0.8.6+dfsg-1) unstable; urgency=low
 
   * New upstream released.
