@@ -1,3 +1,11 @@
+erlang-cowboy (0.10.0+dfsg1-1) UNRELEASED; urgency=medium
+
+  * New upstream released.
+  * Mangle DFSG-postfixed upstream versions properly
+  * Make uscan remove not DFSG-free files from upstream tarballs
+
+ -- Balint Reczey <balint@balintreczey.hu>  Wed, 30 Jul 2014 14:23:24 +0200
+
 erlang-cowboy (0.8.6+dfsg1-1) unstable; urgency=low
 
   * Remove sourceless javascript (jquery.min.js) from source code.
