@@ -6,36 +6,35 @@ list of planned changes and work to be done on the Cowboy
 server. It is intended to be exhaustive but some elements
 might still be missing.
 
-All the following items must be done before Cowboy 1.0 is
-released.
+1.0 (R16 and R17)
+-----------------
 
- *  Parse support for all standard HTTP/1.1 headers
+We are now in the final push to Cowboy 1.0. Further changes
+are expected to be bug fixes and documentation improvements.
 
- *  Support for multipart requests and responses
+2.0 (R17 and R18)
+-----------------
+
+ *  HTTP/2.0
+
+ *  Websocket permessage deflate compression
+
+ *  Better cowboy_req usability
+
+    The number one usability concern with Cowboy today is
+    the need to keep the Req object. Most functions in
+    cowboy_req don't actually modify it and probably never
+    will. This change will make sure that only the required
+    function return a new Req.
+
+    At the same time, some of the functions that cache their
+    results will stop to do so. This will save memory and
+    allow us to not modify the Req.
+
+ *  Start experimenting with maps.
+
+Under consideration
+-------------------
 
  *  Convenience API for extracting query string and body
     information, similar to PHP's $_GET, $_POST and $_FILES
-
- *  Add Range support to REST
-
- *  SPDY support
-
-    We are only interested in supporting existing
-    implementations, not the full protocol, as this
-    protocol has been abandoned in favor of HTTP/2.0
-
- *  Complete the user guide
-
-The following items pertain to Ranch, but are equally important.
-
- *  Resizing the acceptor pool
-
-    We should be able to add more acceptors to a pool but also
-    to remove some of them as needed
-
- *  Add Transport:secure/0
-
-    Currently Cowboy checks if a connection is secure by
-    checking if its name is 'ssl'. This isn't a very modular
-    solution,  adding an API function that returns whether
-    a connection is secure would fix that issue

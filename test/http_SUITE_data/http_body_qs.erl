@@ -15,8 +15,8 @@ handle(Req, State) ->
 
 maybe_echo(<<"POST">>, true, Req) ->
 	case cowboy_req:body_qs(Req) of
-		{error,badlength} ->
-			echo(badlength, Req);
+		{badlength, Req2} ->
+			echo(badlength, Req2);
 		{ok, PostVals, Req2} ->
 			echo(proplists:get_value(<<"echo">>, PostVals), Req2)
 	end;
@@ -32,8 +32,9 @@ echo(badlength, Req) ->
 echo(undefined, Req) ->
 	cowboy_req:reply(400, [], <<"Missing echo parameter.">>, Req);
 echo(Echo, Req) ->
-	cowboy_req:reply(200,
-		[{<<"content-encoding">>, <<"utf-8">>}], Echo, Req).
+	cowboy_req:reply(200, [
+		{<<"content-type">>, <<"text/plain; charset=utf-8">>}
+	], Echo, Req).
 
 terminate(_, _, _) ->
 	ok.
