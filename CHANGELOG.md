@@ -1,6 +1,143 @@
 CHANGELOG
 =========
 
+0.10.0
+------
+
+ *  Update Ranch to 0.10 and Cowlib to 0.6.2
+
+ *  Update the body reading API to allow controlling rate of transfer
+
+    The lack of this feature was causing various timeout issues
+    in some environments.
+
+    The body/2 function now takes a Req and a list of options. The older
+    interface can still be used until Cowboy 1.0.
+
+    The body_qs/2, part/2 and part_body/2 also accept this list of
+    options, and pass it down to the body/2 call. The default options
+    vary between the different functions.
+
+    The return value of the function has changed. Older code should work
+    without modification but you should definitely still test it.
+
+    All functions appropriately decode transfer and content encoding.
+    There is no need to have a special case for that anymore.
+
+    The body/1,2 function supports streaming, with the same interface
+    as the part_body/1,2 function.
+
+ *  Deprecate the cowboy_req:init_stream, stream_body and skip_body functions
+
+    They will be removed in Cowboy 1.0.
+
+ *  Add support for multipart
+
+    The cowboy_req:part/1,2 and cowboy_req:part_body/1,2 can be
+    used for reading a multipart body.
+
+    Documentation has been added.
+
+    The old undocumented multipart functions were removed.
+
+ *  Allow the onresponse hook to override only status and headers
+
+    Previously it wasn't possible to override them without also
+    overriding the body. The new return value is currently marked
+    as experimental.
+
+ *  Make loop handlers work with SPDY
+
+ *  Fix a race condition with loop handlers and keepalive requests
+
+ *  Fix parsing of accept-language header
+
+ *  Fix parsing of authorization header with empty passwords
+
+ *  Fix multiline headers handling
+
+ *  Various optimizations
+
+    All code that is moved to cowlib is optimized at the same time
+    and benchmarks get added for all functions.
+
+    The parsing of connection, content-length and transfer-encoding
+    has been optimized.
+
+    Chunked transfer decoding has been optimized.
+
+ *  Enable +warn_missing_spec by default and fix specs
+
+ *  Remove the non-documented cowboy_client module; use gun instead
+
+ *  Numerous documentation updates and tweaks
+
+    The guide now has a REST principles chapter and revised
+    and completed Websocket chapters, alongside a new multipart chapter.
+
+ *  Add a multipart file upload example
+
+ *  Test suites are being reworked and greatly improved
+   *  Test Cowboy across all releases from R15B01 to 17.0, plus maint and master
+   *  The Autobahn test suite is now always ran (as long as it's installed)
+   *  Expected error reports are now silenced (but still logged)
+   *  Applications are now only started once from a ct hook
+
+0.9.0
+-----
+
+ *  Update Ranch to 0.9.0
+
+ *  SPDY is no longer experimental and is documented
+
+    The SPDY development has been sponsored by the LeoFS project.
+
+ *  Review, improve and document cowboy_static
+   *  Much simplified configuration
+   *  Etag generation is now enabled by default
+   *  Web mimetypes are now detected by default
+   *  Optionally a huge list of mimetypes can also be used
+   *  It not try to magically find the priv directory anymore, use ERL_LIBS
+
+ *  Remove the pretty printing of errors
+
+    Cowboy will no longer print errors, it will instead let the process
+    crash properly, so that links can work with Cowboy. Ranch will catch
+    errors and print a one-liner containing all the error information
+    instead.
+
+ *  Trigger a human readable error when routes lack the starting slash
+
+ *  Add websocket_compress metadata
+
+ *  Fix parsing of hosts given as IPv6 addresses
+
+ *  Fix the decoding of chunked bodies
+
+ *  Fix handling of close, ping and pong Websocket replies
+
+ *  Fix the x-webkit-deflate-frame Websocket extension
+
+ *  Fix PUT behavior in cowboy_rest when creating a resource at the request URL
+
+ *  Fix warnings with the reltool GUI
+
+ *  Start moving code in a new dependency, cowlib
+
+    The code moved there is mostly parsing code and utility functions.
+    Most of it was in the undocumented cowboy_http module before.
+
+ *  Optimize cookie date building and query string building/parsing
+
+ *  Great number of improvements and additions to the user guide
+
+ *  Convert all examples to releases using the erlang.mk+relx combo
+
+    Some examples have also been fixed or slightly improved.
+    The elixir example is now on a separate repository maintained
+    independently. More examples in this language exist in that
+    other repository.
+
 0.8.6
 -----
 
