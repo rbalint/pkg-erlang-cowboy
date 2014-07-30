@@ -2,6 +2,13 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 upstream-name: cowboy
 upstream-contact: Loïc Hoguin <essen@ninenines.eu>
 Source: https://github.com/extend/cowboy.git
+Files-Excluded: examples/websocket/priv/static/jquery.min.js
+ examples/markdown_middleware/priv/small.mp4
+ examples/markdown_middleware/priv/small.ogv
+ examples/static_world/priv/small.mp4
+ examples/static_world/priv/small.ogv
+ examples/web_server/priv/small.mp4
+ examples/web_server/priv/small.ogv
 
 Files: *
 Copyright: 2011-2012, Loïc Hoguin <essen@ninenines.eu>
