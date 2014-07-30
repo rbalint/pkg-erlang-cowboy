@@ -1,8 +1,9 @@
 diff --git a/rebar.config b/rebar.config
-index 443949a..e69de29 100644
+index be8aa03..9780e57 100644
 --- a/rebar.config
 +++ b/rebar.config
-@@ -1,3 +0,0 @@
--{deps, [
--	{ranch, ".*", {git, "git://github.com/extend/ranch.git", "0.8.4"}}
--]}.
+@@ -1,4 +1,2 @@
+ {deps, [
+-	{cowlib, ".*", {git, "git://github.com/extend/cowlib.git", "0.6.2"}},
+-	{ranch, ".*", {git, "git://github.com/extend/ranch.git", "0.10.0"}}
+ ]}.
