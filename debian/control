@@ -16,7 +16,8 @@ Architecture: any
 Section: devel
 Priority: optional
 Depends: ${misc:Depends}, ${shlibs:Depends},
-	 erlang-base-hipe | erlang-base | ${erlang-abi:Depends}, ${erlang:Depends}
+	 erlang-base-hipe | erlang-base | ${erlang-abi:Depends}, ${erlang:Depends},
+	 erlang-ranch (>= 0.10.0~), erlang-cowlib (>= 0.6.2-2~)
 Description: Cowboy is a small, fast and modular HTTP server written in Erlang
  Cowboy is also a socket acceptor pool, able to accept connections
  for any kind of TCP protocol.
